@@ -13,7 +13,7 @@ laurea (286)
 
 
 
--- 1
+--1
 SELECT * FROM `students` WHERE YEAR(`date_of_birth`) = 1990;
 
 --2
@@ -31,4 +31,8 @@ SELECT * FROM `exams` WHERE `date` = "2020-06-20" AND HOUR(`hour`)> 14;
 --6
 SELECT * FROM `degrees` WHERE `level` = "magistrale";
 
+--7
+SELECT COUNT(id) AS `departments_count` FROM `departments`;
 
+--8
+SELECT COUNT(id) AS `teachers_without_phone` FROM `teachers` WHERE `phone` IS NULL;
