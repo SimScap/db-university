@@ -30,7 +30,13 @@ ON `course_teacher`.`course_id` = `courses`.`id`
 WHERE `course_teacher`.`teacher_id` = 44;
 
 --4
-
+SELECT `students`.`surname`, `students`.`name`, `departments`.`name`
+FROM `students` 
+INNER JOIN `degrees` 
+ON `degrees`.`id` = `students`.`degree_id` 
+INNER JOIN `departments` 
+ON `departments`.`id` = `degrees`.`department_id` 
+ORDER BY `students`.`surname` ASC, `students`.`name` ASC
 
 --5
 
