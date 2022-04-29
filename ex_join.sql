@@ -39,7 +39,13 @@ ON `departments`.`id` = `degrees`.`department_id`
 ORDER BY `students`.`surname` ASC, `students`.`name` ASC
 
 --5
-
+SELECT * FROM `degrees`
+JOIN `courses`
+ON `courses`.`degree_id` = `degrees`.`id`
+INNER JOIN `course_teacher`
+ON `courses`.`id` = `course_teacher`.`course_id`
+JOIN `teachers`
+ON `teachers`.`id`= `course_teacher`.`teacher_id`;
 
 --6
 
