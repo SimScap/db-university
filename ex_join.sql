@@ -48,7 +48,7 @@ JOIN `teachers`
 ON `teachers`.`id`= `course_teacher`.`teacher_id`;
 
 --6
-SELECT `teachers`.`id`, `teachers`.`name`, `teachers`.`surname`
+SELECT DISTINCT `teachers`.`id`, `teachers`.`name`, `teachers`.`surname`
 FROM `teachers`
 JOIN `course_teacher`
 ON `course_teacher`.`teacher_id` = `teachers`.`id`
